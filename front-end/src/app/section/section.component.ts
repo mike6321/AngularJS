@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section.component.scss']
 })
 export class SectionComponent implements OnInit {
+  present =  'welcome';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  startTime($event: any) {
+    this.present = $event;
+  }
 }
