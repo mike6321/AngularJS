@@ -1,20 +1,35 @@
 import {NgModule} from '@angular/core';
 import {SectionComponent} from "./section.component";
-import {TimeDisplayComponent} from "./stopwatch/time-display/time-display.component";
-import {ButtonsComponent} from "./stopwatch/buttons/buttons.component";
 import {CommonModule} from "@angular/common";
 import {StopwatchModule} from "./stopwatch/stopwatch.module";
+import {RouterModule, Routes} from "@angular/router";
+import {StopwatchComponent} from "./stopwatch/stopwatch.component";
+import { ClockComponent } from './clock/clock.component';
+
+const routes: Routes = [
+  {
+    path: 'stopwatch',
+    component: StopwatchComponent
+  },
+  {
+    path: 'clock',
+    component: ClockComponent
+  }
+]
 
 @NgModule({
   imports: [
     CommonModule,
-    StopwatchModule
+    StopwatchModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [
-    SectionComponent
+    SectionComponent,
+    ClockComponent
   ],
   exports:[
-    SectionComponent
+    SectionComponent,
+    RouterModule
   ]
 })
 export class SectionModule { }

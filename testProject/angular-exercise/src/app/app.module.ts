@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {LayoutModule} from "./layout/layout.module";
 import {SectionModule} from "./section/section.module";
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {SectionModule} from "./section/section.module";
   imports: [
     BrowserModule,
     LayoutModule,
-    SectionModule
+    SectionModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
