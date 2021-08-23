@@ -17,4 +17,5 @@ export class AppComponent {
   style= {
     color: 'green'
   };
+  color= "aqua";
 }
