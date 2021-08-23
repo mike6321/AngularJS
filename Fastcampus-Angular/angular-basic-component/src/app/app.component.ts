@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  click = () => {
+  click = (e, value) => {
+    console.log(e, value);
     this.title = '자식으로 부터 실행됌';
   }
   myEventParent() {
