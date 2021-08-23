@@ -8,6 +8,7 @@ import {Route, RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 // const routes: Route[] = [
 //   {path: '', component: HomeComponent},
@@ -19,7 +20,8 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
