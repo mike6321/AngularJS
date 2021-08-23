@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  url;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    // this.route.queryParamMap.subscribe(data => {
+    //   console.log(data.get('url'));
+    //   this.url = data.get('url');
+    // })
+
+    this.url = this.route.snapshot.queryParamMap.get('url');
+    console.log(this.url);
   }
 
 }
