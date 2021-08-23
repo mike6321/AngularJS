@@ -7,6 +7,7 @@ import {Sample1Component} from "./component/sample1.component";
 import {Sample2Component} from "./component/sample2/sample2.component";
 import { Sample3Component } from './component/sample3/sample3.component';
 import { Sample4Component } from './component/sample4/sample4.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { Sample4Component } from './component/sample4/sample4.component';
     Sample4Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
