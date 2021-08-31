@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DoCheck, OnChanges} from "@angular/core/src/metadata/lifecycle_hooks";
 
 @Component({
   selector: 'cc-check-list-result',
@@ -13,20 +12,23 @@ export class CheckListResultComponent implements OnInit {
    * <cc-check-list-result [checkedResult]="checkedResultData"></cc-check-list-result>
    * */
   @Input()
-  checkedResult: string[];
+  _checkedData: string[];
   checkedCnt: number;
 
   constructor() {
-    this.initResult();
+
   }
 
   ngOnInit() {
 
   }
 
-  private initResult() {
-    this.checkedCnt = 0;
-    this.checkedResult = [];
+  @Input()
+  set checkedResult(checkedResult: string[]) {
+    if (checkedResult) {
+      this._checkedData = checkedResult;
+      this.checkedCnt = this._checkedData.length;
+    }
   }
 
 }
