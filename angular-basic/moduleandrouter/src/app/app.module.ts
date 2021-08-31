@@ -7,11 +7,17 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {ProductModule} from "./product/product.module";
 import {CategoryModule} from "./category/category.module";
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     /*Angular Module*/
