@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CheckListComponent } from './check-list/check-list.component';
+import {CheckListDataService} from "./check-list/check-list-data.service";
+import { CheckListResultComponent } from './check-list/check-list-result/check-list-result.component';
+import { ResultGraphComponent } from './check-list/check-list-result/result-graph/result-graph.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CheckListComponent,
+    CheckListResultComponent,
+    ResultGraphComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CheckListDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
