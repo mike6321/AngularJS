@@ -7,5 +7,5 @@ import {SidebarMenu} from "./scm-main/sidebar/sidebar.component";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentMenu: SidebarMenu;
+  // currentMenu: SidebarMenu;
 }

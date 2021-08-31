@@ -8,6 +8,7 @@ import {HttpModule} from "@angular/http";
 import {ProductModule} from "./product/product.module";
 import {CategoryModule} from "./category/category.module";
 import {ScmMainModule} from "./scm-main/scm-main.module";
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {ScmMainModule} from "./scm-main/scm-main.module";
     /*App Module*/
     ScmMainModule,
     ProductModule,
-    CategoryModule
+    CategoryModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

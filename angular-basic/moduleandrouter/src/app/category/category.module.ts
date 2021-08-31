@@ -6,7 +6,7 @@ import { CategoryManagementComponent } from './category-management/category-mana
   imports: [
     CommonModule
   ],
-  declarations: [CategoryManagementComponent],
-  exports: [CategoryManagementComponent]
+  declarations: [CategoryManagementComponent]
+  // exports: [CategoryManagementComponent]
 })
 export class CategoryModule { }
