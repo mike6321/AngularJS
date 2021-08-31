@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import {ProductModule} from "./product/product.module";
+import {CategoryModule} from "./category/category.module";
 
 
 @NgModule({
@@ -10,7 +14,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    /*Angular Module*/
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    /*App Module*/
+    ProductModule,
+    CategoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
