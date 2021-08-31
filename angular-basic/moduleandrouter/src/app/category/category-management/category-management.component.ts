@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-category-management',
+  selector: 'scm-category-management',
   templateUrl: './category-management.component.html',
   styleUrls: ['./category-management.component.css']
 })
