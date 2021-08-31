@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'cc-check-list-result',
@@ -14,6 +14,12 @@ export class CheckListResultComponent implements OnInit {
   @Input()
   _checkedData: string[];
   checkedCnt: number;
+
+  /**
+   * 자식이 부모에게 값을 전달
+   * */
+  @Output()
+  onSelectedToRemoveItem = new EventEmitter<string>();
 
   constructor() {
 
@@ -31,4 +37,7 @@ export class CheckListResultComponent implements OnInit {
     }
   }
 
+  removeMe(idx: number) {
+    this.onSelectedToRemoveItem.emit(this._checkedData[idx]);
+  }
 }
