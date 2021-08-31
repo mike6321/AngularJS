@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {DoCheck, OnChanges} from "@angular/core/src/metadata/lifecycle_hooks";
 
 @Component({
   selector: 'cc-check-list-result',
@@ -7,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckListResultComponent implements OnInit {
 
-  checkedCnt: number;
+  /**
+   * 부모에 대한 값을 받아 올때
+   * <cc-check-list-result [checkedResult]="checkedResultData"></cc-check-list-result>
+   * */
+  @Input()
   checkedResult: string[];
+  checkedCnt: number;
 
   constructor() {
     this.initResult();
   }
 
   ngOnInit() {
+
   }
 
   private initResult() {
