@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ProductManagementComponent} from "./product/product-management/product-management.component";
 import {CategoryManagementComponent} from "./category/category-management/category-management.component";
-import {MainDashboardComponent} from "./scm-main/main-dashboard/main-dashboard.component";
+import {MainDashboardComponent} from "./main/main-dashboard/main-dashboard.component";
 import {PageNotFoundComponent} from "./scm-main/page-not-found/page-not-found.component";
 import {RouterModule, Routes} from "@angular/router";
 

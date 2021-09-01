@@ -9,6 +9,7 @@ import {ProductModule} from "./product/product.module";
 import {CategoryModule} from "./category/category.module";
 import {ScmMainModule} from "./scm-main/scm-main.module";
 import { AppRoutingModule } from './/app-routing.module';
+import {MainModule} from "./main/main.module";
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './/app-routing.module';
     /*App Module*/
     ScmMainModule,
     ProductModule,
+    MainModule,
     CategoryModule,
     AppRoutingModule
   ],
